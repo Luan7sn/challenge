@@ -1,0 +1,34 @@
+{
+  "name": "github-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev:server": "ts-node-dev -r tsconfig-paths/register --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts",
+    "deploy": "git add . && git commit -m Heroku && git push && git push heroku main"
+  },
+  "_moduleAliases": {
+    "@modules": "dist/modules",
+    "@shared": "dist/shared"
+  },
+  "author": "Luan",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "4.17.13",
+    "@types/node": "17.0.16",
+    "axios": "0.25.0",
+    "celebrate": "^15.0.1",
+    "cors": "^2.8.5",
+    "express": "4.18.1",
+    "express-async-errors": "^3.1.1",
+    "helmet": "5.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "rxjs": "^7.5.6"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/jsonwebtoken": "^8.5.8"
+  }
+}
